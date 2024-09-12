@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>NYX</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>NYX</h1>
+      <h4>Block specific websites for improved productivity</h4>
+      <form id="block-form">
+        <label for="website">Website URL:</label>
+        <input
+          type="text"
+          id="website"
+          name="website"
+          placeholder="e.g., www.example.com"
+          required
+        />
+        <label for="duration">Block Duration:</label>
+        <div class="time-inputs">
+          <input
+            type="number"
+            placeholder="Hour"
+            id="hours"
+            name="hours"
+            min="0"
+            max="23"
+          />
+          <input
+            type="number"
+            placeholder="Minutes"
+            id="minutes"
+            name="minutes"
+            min="0"
+            max="59"
+          />
+        </div>
+        <button type="submit">Block Website</button>
+      </form>
+      <div id="blocked-websites">
+        <h2>Blocked Websites</h2>
+        <ul id="blocked-list"></ul>
+      </div>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
